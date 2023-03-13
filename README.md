@@ -25,6 +25,11 @@ Por definir:
 - ¿cómo se abrirán las imágenes? ¿dentro de la aplicación? ¿será un link a una URL y se visualizará sobre el navegador?
 - Los archivos .xlsx ¿dónde se abrirán?
 
+### Firebase
+
+Actualmente el uso de FCM para el envío de notificaciones no tiene costo al día 12 Marzo 2023
+
+![](imgs/3.png)
 
 
 ## Backend
