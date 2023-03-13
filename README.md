@@ -175,6 +175,73 @@ GET /notifications/user/{user_id}
 }
 ```
 
+### Retrieving groups
+
+`GET /groups`
+
+- Response Body:
+
+```json
+{
+    "status": "success" | "error",
+    "groups": [
+        {
+            "id": "string",
+            "name": "string",
+            "members": [
+                {
+                    "id": "string",
+                    "name": "string",
+                    "type": "user" | "group"
+                },
+                ...
+            ]
+        },
+        ...
+    ]
+}
+```
+ 
+- `status`: indicates whether the operation was successful or not. 
+- `groups`: an array of objects representing the groups. Each group object contains: 
+- `id`: the ID of the group. 
+- `name`: the name of the group. 
+- `members`: an array of objects representing the members of the group. Each member object contains: 
+- `id`: the ID of the user or group. 
+- `name`: the name of the user or group. 
+- `type`: indicates whether the member is a user or a group.
+
+### Retrieving members of a specific group
+
+```
+GET /groups/{group_id}/members
+```
+
+- Path Parameters: 
+- `group_id`: the ID of the group whose members should be retrieved. 
+- Response Body:
+
+```json
+{
+    "status": "success" | "error",
+    "members": [
+        {
+            "id": "string",
+            "name": "string",
+            "type": "user" | "group"
+        },
+        ...
+    ]
+}
+```
+
+ 
+- `status`: indicates whether the operation was successful or not. 
+- `members`: an array of objects representing the members of the group. Each member object contains: 
+- `id`: the ID of the user or group. 
+- `name`: the name of the user or group. 
+- `type`: indicates whether the member is a user or a group.
+
 ## Web FrontEnd
 
 Para la parte Web se necesitarían al menos las siguientes pantallas:
